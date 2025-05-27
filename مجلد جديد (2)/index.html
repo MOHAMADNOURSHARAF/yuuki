@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الشخصي - يووكي - ستايل زجاجي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-image: url('milad-fakurian-0_8gAoFrzbw-unsplash (1).jpg'); /* Default placeholder, replace with your image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Keeps the background fixed during scroll */
+            color: #E0F2FE; /* Light text color for better contrast on potentially dark bg */
+        }
+
+        /* Glassmorphism Card Style */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%); /* For Safari */
+            border-radius: 24px; /* rounded-3xl */
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+            color: #1F2937; /* Darker text for readability on light glass */
+        }
+
+        .glass-card-darker-text {
+             color: #111827; /* Even darker text if needed */
+        }
+
+        /* Navigation Style */
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px) saturate(150%);
+            -webkit-backdrop-filter: blur(10px) saturate(150%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link-glass {
+            padding: 10px 18px;
+            border-radius: 12px; /* rounded-xl */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            color: #E0F2FE; /* Light text for nav links */
+            font-weight: 600;
+        }
+
+        .nav-link-glass:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #FFF;
+        }
+        
+        .hero-text-shadow {
+            text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-glass-primary {
+            background: rgba(250, 204, 21, 0.6); /* Semi-transparent yellow (FACC15) */
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            color: #1F2937; 
+            font-weight: bold;
+            padding: 14px 32px;
+            border-radius: 16px; /* rounded-2xl */
+            transition: all 0.3s ease;
+            border: 1px solid rgba(250, 204, 21, 0.3);
+            box-shadow: 0 4px 15px rgba(250, 204, 21, 0.2);
+        }
+        .button-glass-primary:hover {
+            background: rgba(250, 204, 21, 0.8);
+            box-shadow: 0 6px 20px rgba(250, 204, 21, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .input-glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 16px; /* rounded-2xl */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 18px;
+            color: #1F2937;
+            transition: all 0.3s ease;
+        }
+        .input-glass::placeholder {
+            color: #6B7280;
+        }
+        .input-glass:focus {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(250, 204, 21, 0.5); /* Yellow accent on focus */
+            box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.2);
+        }
+
+        .project-card-glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px) saturate(160%);
+            -webkit-backdrop-filter: blur(10px) saturate(160%);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #374151; /* Slightly lighter dark text */
+        }
+        .project-card-glass:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .text-brand-accent {
+            color: #F59E0B; /* Amber color for accents inside cards */
+        }
+
+        /* Ensure main content area has some padding from top if nav is sticky */
+        .main-content-padding {
+            padding-top: 80px; /* Adjust based on nav height */
+        }
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <nav class="nav-glass shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3.5 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-white hero-text-shadow">يووكي</a>
+            <div class="space-x-1 space-x-reverse">
+                <a href="#home" class="nav-link-glass">الرئيسية</a>
+                <a href="#about" class="nav-link-glass">عني</a>
+                <a href="#projects" class="nav-link-glass">مشاريعي</a>
+                <a href="#contact" class="nav-link-glass">تواصل معي</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content-padding">
+        <header id="home" class="text-white py-28 md:py-40 min-h-[calc(100vh-80px)] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 hero-text-shadow">أهلاً بك في فضائي الإبداعي!</h1>
+                <h2 class="text-2xl md:text-4xl font-light mb-4 hero-text-shadow">أنا محمد نور الشرف (يووكي)</h2>
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-12 hero-text-shadow leading-relaxed">
+                    مطوّر ومصمم واجهات، أحوّل الأفكار إلى تجارب رقمية فريدة وساحرة.
+                </p>
+                <a href="#projects" class="button-glass-primary">
+                    استكشف أعمالي
+                </a>
+            </div>
+        </header>
+
+        <section id="about" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="glass-card p-8 md:p-12 max-w-4xl mx-auto glass-card-darker-text">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-700">من أنا؟</h2>
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                        <div class="md:w-1/3 text-center">
+                            <img src="photo_2025-05-27_13-42-17.jpg" alt="صورة تعريفية لـ يووكي" 
+                                 class="rounded-2xl shadow-xl mx-auto w-full max-w-[250px] border-2 border-white/30">
+                        </div>
+                        <div class="md:w-2/3">
+                            <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                                مرحباً! أنا يووكي، مطور برمجيات أعمل بشغف على تحويل الأفكار إلى واقع ملموس. لدي خبرة في [اذكر هنا بعض التقنيات أو المجالات التي تبرع فيها، مثال: تطوير تطبيقات الويب باستخدام React و Node.js، أو تصميم قواعد البيانات].
+                            </p>
+                            <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                                أسعى دائماً لتعلم كل ما هو جديد في عالم التكنولوجيا وتطبيق أحدث الأدوات والتقنيات في مشاريعي. أؤمن بأن التصميم الجيد والشيفرة النظيفة هما أساس أي مشروع ناجح.
+                            </p>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                في وقت فراغي، أستمتع بـ [اذكر هنا بعض هواياتك أو اهتماماتك، مثال: القراءة، السفر، أو المساهمة في مشاريع مفتوحة المصدر].
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-white hero-text-shadow">أعمالي وإبداعاتي</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="project-card-glass p-6 flex flex-col">
+                        <img src="photo_2025-05-27_13-48-04.jpg" alt="صورة مشروع 1" class="rounded-xl mb-5 w-full h-52 object-cover">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">هاد انا </h3>
+                        <p class="text-gray-600 mb-5 flex-grow">هاد انا بس بالغباء الصناعي</p>
+                        <a href="#" class="mt-auto inline-block text-brand-accent hover:text-amber-600 font-semibold group self-start">
+                            شاهد التفاصيل
+                            <span class="inline-block transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 motion-reduce:transform-none">&rarr;</span>
+                        </a>
+                    </div>
+                    <div class="project-card-glass p-6 flex flex-col">
+                        <img src="photo_2025-05-27_13-54-29.jpg" alt="صورة مشروع 2" class="rounded-xl mb-5 w-full h-52 object-cover">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">صورة قط من ججتسو كايسن</h3>
+                        <p class="text-gray-600 mb-5 flex-grow">تمت صناعتها بالفوتوشوب</p>
+                         <a href="#" class="mt-auto inline-block text-brand-accent hover:text-amber-600 font-semibold group self-start">
+                            شاهد التفاصيل
+                            <span class="inline-block transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 motion-reduce:transform-none">&rarr;</span>
+                        </a>
+                    </div>
+                    <div class="project-card-glass p-6 flex flex-col">
+                        <img src="photo_2025-05-27_13-56-48.jpg" alt="صورة مشروع 3" class="rounded-xl mb-5 w-full h-52 object-cover">
+                        <h3 class="text-2xl font-semibold mb-2 text-gray-800">صحن بيض</h3>
+                        <p class="text-gray-600 mb-5 flex-grow">صحن بيض شو متوقع اكسيوزمي ؟</p>
+                         <a href="#" class="mt-auto inline-block text-brand-accent hover:text-amber-600 font-semibold group self-start">
+                            شاهد التفاصيل
+                            <span class="inline-block transition-transform group-hover:translate-x-1 rtl:group-hover:-translate-x-1 motion-reduce:transform-none">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                 <div class="glass-card p-8 md:p-12 max-w-2xl mx-auto glass-card-darker-text">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-700">لنتحدث!</h2>
+                    <p class="text-lg text-gray-700 mb-8 text-center">
+                        هل لديك فكرة مشروع أو ترغب في التعاون؟ أنا هنا للاستماع!
+                    </p>
+                    <form action="#" method="POST">
+                        <div class="mb-5">
+                            <label for="name" class="block text-gray-600 font-medium mb-2">الاسم</label>
+                            <input type="text" id="name" name="name" class="w-full input-glass" placeholder="اسمك الكامل" required>
+                        </div>
+                        <div class="mb-5">
+                            <label for="email" class="block text-gray-600 font-medium mb-2">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" class="w-full input-glass" placeholder="example@example.com" required>
+                        </div>
+                        <div class="mb-8">
+                            <label for="message" class="block text-gray-600 font-medium mb-2">الرسالة</label>
+                            <textarea id="message" name="message" rows="5" class="w-full input-glass" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="button-glass-primary">
+                                أرسل الآن
+                            </button>
+                        </div>
+                    </form>
+                    <div class="mt-10 text-center">
+                        <p class="text-gray-600 mb-3">أو تجدني على:</p>
+                        <div class="flex justify-center space-x-5 space-x-reverse">
+                            <a href="#" class="text-gray-500 hover:text-amber-500 transition-colors">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.738 9.494.524.097.716-.228.716-.506 0-.248-.009-.898-.014-1.764C6.298 19.606 5.5 18.13 5.5 18.13c-.476-1.213-1.162-1.535-1.162-1.535-.953-.652.072-.639.072-.639 1.053.074 1.606 1.08 1.606 1.08.936 1.602 2.454 1.138 3.052.87.095-.677.367-1.138.666-1.398-2.33-.265-4.78-1.162-4.78-5.18 0-1.144.408-2.078 1.078-2.81a3.847 3.847 0 01.102-2.77s.88-.282 2.882 1.074a9.96 9.96 0 012.626-.354c.882 0 1.764.118 2.626.354 2.002-1.356 2.882-1.074 2.882-1.074.39.89.156 1.936.102 2.77.67.732 1.076 1.666 1.076 2.81 0 4.03-2.454 4.913-4.792 5.17.377.324.71.97.71 1.954 0 1.412-.012 2.552-.012 2.898 0 .28.19.598.722.504A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-amber-500 transition-colors">
+                               <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.738 9.494.524.097.716-.228.716-.506 0-.248-.009-.898-.014-1.764C6.298 19.606 5.5 18.13 5.5 18.13c-.476-1.213-1.162-1.535-1.162-1.535-.953-.652.072-.639.072-.639 1.053.074 1.606 1.08 1.606 1.08.936 1.602 2.454 1.138 3.052.87.095-.677.367-1.138.666-1.398-2.33-.265-4.78-1.162-4.78-5.18 0-1.144.408-2.078 1.078-2.81a3.847 3.847 0 01.102-2.77s.88-.282 2.882 1.074a9.96 9.96 0 012.626-.354c.882 0 1.764.118 2.626.354 2.002-1.356 2.882-1.074 2.882-1.074.39.89.156 1.936.102 2.77.67.732 1.076 1.666 1.076 2.81 0 4.03-2.454 4.913-4.792 5.17.377.324.71.97.71 1.954 0 1.412-.012 2.552-.012 2.898 0 .28.19.598.722.504A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg> </a>
+                            <a href="#" class="text-gray-500 hover:text-amber-500 transition-colors">
+                               <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.738 9.494.524.097.716-.228.716-.506 0-.248-.009-.898-.014-1.764C6.298 19.606 5.5 18.13 5.5 18.13c-.476-1.213-1.162-1.535-1.162-1.535-.953-.652.072-.639.072-.639 1.053.074 1.606 1.08 1.606 1.08.936 1.602 2.454 1.138 3.052.87.095-.677.367-1.138.666-1.398-2.33-.265-4.78-1.162-4.78-5.18 0-1.144.408-2.078 1.078-2.81a3.847 3.847 0 01.102-2.77s.88-.282 2.882 1.074a9.96 9.96 0 012.626-.354c.882 0 1.764.118 2.626.354 2.002-1.356 2.882-1.074 2.882-1.074.39.89.156 1.936.102 2.77.67.732 1.076 1.666 1.076 2.81 0 4.03-2.454 4.913-4.792 5.17.377.324.71.97.71 1.954 0 1.412-.012 2.552-.012 2.898 0 .28.19.598.722.504A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="py-10 text-center mt-10 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <p class="mb-2 text-slate-300">&copy; <span id="currentYear"></span> جميع الحقوق محفوظة | موقع يووكي (محمد نور الشرف)</p>
+            <p class="text-slate-400">صُنع بـ <span class="text-amber-400 text-lg">✨</span> وشغف باستخدام Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <script>
+        // تحديث السنة الحالية في التذييل
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // التمرير السلس للروابط الداخلية
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if(targetElement) {
+                    // Consider nav height for accurate scroll position
+                    const navHeight = document.querySelector('nav').offsetHeight || 0;
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - navHeight - 20; // 20px extra offset
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Simple parallax for hero text (optional, can be enhanced)
+        window.addEventListener('scroll', function() {
+            const heroTextElements = document.querySelectorAll('#home .hero-text-shadow');
+            const scrollPosition = window.pageYOffset;
+            heroTextElements.forEach(el => {
+                // Adjust the '0.5' for more or less parallax effect
+                el.style.transform = 'translateY(' + scrollPosition * 0.15 + 'px)';
+            });
+        });
+
+    </script>
+
+</body>
+</html>
